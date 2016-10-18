@@ -29,8 +29,8 @@ VOLUME /var/lib/docker
 EXPOSE 2375
 
 #Start
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+ADD entrypoint.sh ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD []
