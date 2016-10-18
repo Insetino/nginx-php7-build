@@ -1,21 +1,16 @@
-Nginx and PHP for Docker
+Nginx and PHP for Gitlab CI docker runner
 
 ## Last Version
 nginx: **1.11.1**   
 php:   **7.0.8**
 
 ## Docker Hub   
-**Nginx-PHP7:** [https://hub.docker.com/r/skiychan/nginx-php7](https://hub.docker.com/r/skiychan/nginx-php7)   
+**Nginx-PHP7:** [https://hub.docker.com/r/legerete/nginx-php7-build](https://hub.docker.com/r/legerete/nginx-php7-build)   
    
 ## Installation
 Pull the image from the docker index rather than downloading the git repo. This prevents you having to build the image on every docker host.
 ```sh
-docker pull skiychan/nginx-php7:latest
-```
-
-To pull the Nightly Version:   
-```
-docker pull skiychan/nginx-php7:nightly
+docker pull legerete/nginx-php7-build:latest
 ```
 
 ## Running
@@ -45,13 +40,16 @@ skiychan/nginx-php7
 
 ## Enabling Extensions
 ```sh
-docker run --name nginx -p 8080:80 -d -v /your_php_extension:/usr/local/php/etc/php.d skiychan/nginx-php7
+docker run --name nginx -p 8080:80 -d -v /your_php_extension:/usr/local/php/etc/php.d legerete/nginx-php7-build
 ```
 
 ## [ChangeLog](changelogs.md)
   
 
 ## Author
+Author: Petr Besir Horáček
+
+## Thanks to
 Author: Skiychan    
 Email:  dev@skiy.net       
 Link:   https://www.zzzzy.com
