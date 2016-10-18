@@ -48,6 +48,7 @@ docker run --name nginx -p 8080:80 -d -v /your_php_extension:/usr/local/php/etc/
 
 ## Author
 Author: Petr Besir Horáček
+Email: petr.horacek@legerete.cz
 
 ## Thanks to
 Author: Skiychan    
