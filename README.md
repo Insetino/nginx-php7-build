@@ -23,7 +23,7 @@ You can then browse to http://\<docker_host\>:8080 to view the default install f
 ## Volumes
 If you want to link to your web site directory on the docker host to the container run:
 ```sh
-docker run --name nginx -p 8080:80 -v /your_code_directory:/data/www -d skiychan/nginx-php7
+docker run --name nginx -p 8080:80 -v /your_code_directory:/data/www -d legerete/nginx-php7-build
 ```
 
 ## Enabling SSL
