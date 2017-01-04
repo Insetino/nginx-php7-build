@@ -1,4 +1,4 @@
-FROM legerete/nginx-php7:1.0.0
+FROM legerete/nginx-php7:v1.0.1
 MAINTAINER Petr Besir Horacek <petr.horacek@legerete.cz>
 
 RUN yum install -y docker \
