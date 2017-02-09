@@ -1,15 +1,20 @@
 FROM legerete/nginx-php7:v1.0.1
 MAINTAINER Petr Besir Horacek <petr.horacek@legerete.cz>
 
-RUN yum install -y docker \
+RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - && \
+    yum install -y docker \
     btrfs-progs \
     e2fsprogs \
     e2fsprogs-extra \
     iptables \
     xfsprogs \
+    nodejs \
+    gcc \
+    gcc-c++ \
     xz \
     which
 
+RUN npm upgrade minimatch && npm upgrade graceful-fs && npm install -g gulp
 
 # set up subuid/subgid so that "--userns-remap=default" works out-of-the-box
 RUN set -x \
